@@ -49,5 +49,17 @@
     <None Include="Shader.vert">
       <Filter>Resource Files\Vertex Shaders</Filter>
     </None>
+    <None Include="Light.vert">
+      <Filter>Resource Files\Vertex Shaders</Filter>
+    </None>
+    <None Include="Light.frag">
+      <Filter>Resource Files\Fragment Shaders</Filter>
+    </None>
+    <None Include="Lamp.vert">
+      <Filter>Resource Files\Vertex Shaders</Filter>
+    </None>
+    <None Include="Lamp.frag">
+      <Filter>Resource Files\Fragment Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

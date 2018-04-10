@@ -130,6 +130,10 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Lamp.frag" />
+    <None Include="Lamp.vert" />
+    <None Include="Light.frag" />
+    <None Include="Light.vert" />
     <None Include="Shader.frag" />
     <None Include="Shader.vert" />
   </ItemGroup>

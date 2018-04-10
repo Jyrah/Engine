@@ -1,1 +1,12 @@
-﻿  Engine.vcxproj -> C:\Users\Jyrah\Engine\Engine\Debug\Engine.exe
+﻿  Engine.cpp
+c:\users\jyrah\engine\engine\engine\shaders.h(53): warning C4101: 'infoLog': unreferenced local variable
+c:\users\jyrah\engine\engine\engine\shaders.h(52): warning C4101: 'success': unreferenced local variable
+c:\users\jyrah\engine\engine\engine\engine.cpp(259): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(399): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(400): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(404): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(405): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(407): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(408): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(415): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Engine.vcxproj -> C:\Users\Jyrah\Engine\Engine\Debug\Engine.exe
