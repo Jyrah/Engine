@@ -1,33 +1,60 @@
 #version 330 core
-out vec4 FragColor;
 
 in vec3 Normal;  
-in vec3 FragPos;  
+in vec3 FragPos;
+in vec2 TexCoords;
 
+struct Material {
+    sampler2D diffuse;
+	sampler2D specular;
+	sampler2D emission;
+    float shininess;
+};
+
+struct Light {
+	vec3 position;
+
+	vec3 ambient;
+	vec3 diffuse;
+	vec3 specular;
+};
+
+uniform Light light;
+uniform Material material;
 uniform vec3 viewPos;  
-uniform vec3 lightPos; 
-uniform vec3 lightColor;
-uniform vec3 objectColor;
+uniform float time;
+
+out vec4 FragColor;
 
 void main()
 {
-	//A,bient Lighting
-	float ambientStrength = 0.1;
-	vec3 ambientLight = ambientStrength * lightColor;
+	//Ambient Lighting
+	vec3 ambientLight = light.ambient * texture(material.diffuse, TexCoords).rgb;
 
 	//Diffuse Lighting
 	vec3 norm = normalize(Normal);
-	vec3 lightDir = normalize(lightPos - FragPos); 
+	vec3 lightDir = normalize(light.position - FragPos); 
 	float diff = max(dot(norm, lightDir), 0.0);
-	vec3 diffuseLight = diff * lightColor;
+	vec3 diffuseLight = light.diffuse * diff * texture(material.diffuse, TexCoords).rgb;
 
 	//Specular Lighting
-	float specularStrength = 0.5;
 	vec3 viewDir = normalize(viewPos - FragPos);
 	vec3 reflectDir = reflect(-lightDir, norm);
-	float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
-	vec3 specular = specularStrength * spec * lightColor;  
+	float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.shininess);
+	vec3 specular = light.specular * spec * texture(material.specular, TexCoords).rgb;
 
-	vec3 result = (ambientLight + diffuseLight + specular) * objectColor;
+	//Emission Lighting
+    vec3 emission = vec3(0.0);
+   // if (texture(material.specular, TexCoords).rgb == 0.0)   /*rough check for blackbox inside spec texture */
+    //{
+        //apply emission texture
+        emission = texture(material.emission, TexCoords).rgb;
+        
+        //some extra fun stuff with "time uniform"
+        emission = texture(material.emission, TexCoords + vec2(0.0,time)).rgb;   /*moving */
+
+    //}
+
+	vec3 result = ambientLight + diffuseLight + specular /*+ emission*/;
     FragColor = vec4(result, 1.0);
 }
