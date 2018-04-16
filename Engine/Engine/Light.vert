@@ -13,7 +13,8 @@ uniform mat4 projection;
 uniform vec3 posP;
 uniform float time;
 
-void main(){
+/*void main()
+{
 	float phase = 0.5 * time;
 	float freq = 1.0;
 	float amplitude = 0.5;
@@ -28,13 +29,13 @@ void main(){
 	TexCoords = aTexCoords;
 
 	gl_Position = projection * view * model * vec4(aPos + offSet + posP, 1.0);
-}
+}*/
 
-/*void main()
+void main()
 {
 	FragPos = vec3(model * vec4(aPos, 1.0));
 	Normal = mat3(transpose(inverse(model))) * aNormal;
 	TexCoords = aTexCoords;
 
 	gl_Position = projection * view * model * vec4(aPos, 1.0);
-}*/
+}

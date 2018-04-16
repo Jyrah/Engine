@@ -1,23 +1,36 @@
 ﻿  Engine.cpp
 c:\users\jyrah\engine\engine\engine\shaders.h(53): warning C4101: 'infoLog': unreferenced local variable
 c:\users\jyrah\engine\engine\engine\shaders.h(52): warning C4101: 'success': unreferenced local variable
-c:\users\jyrah\engine\engine\engine\engine.cpp(287): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(327): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(226): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(406): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(411): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(416): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(421): warning C4305: '+=': truncation from 'double' to 'float'
 c:\users\jyrah\engine\engine\engine\engine.cpp(426): warning C4305: '-=': truncation from 'double' to 'float'
 c:\users\jyrah\engine\engine\engine\engine.cpp(431): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(436): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(441): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(446): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(451): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(457): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(462): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(467): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(472): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(491): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(492): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(496): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(497): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(499): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(500): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(507): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(437): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(442): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(447): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(452): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(471): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(472): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(476): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(477): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(479): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(480): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(487): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(context.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(input.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(vulkan.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_init.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_monitor.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_time.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_tls.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_tls.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_window.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(wgl_context.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
+glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(egl_context.obj)' or at 'C:\Users\Jyrah\Engine\Engine\Debug\glfw.pdb'; linking object as if no debug info
   Engine.vcxproj -> C:\Users\Jyrah\Engine\Engine\Debug\Engine.exe
