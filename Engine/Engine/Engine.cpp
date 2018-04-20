@@ -32,7 +32,7 @@ const unsigned int SCR_HEIGHT = 1080;
   |   Variables   |
   |---------------|*/
 //Camera
-Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
+Camera camera(glm::vec3(0.0f, 5.0f, 5.0f));
 bool firstMouse = true;
 float lastX = SCR_WIDTH / 2.0;
 float lastY = SCR_HEIGHT / 2.0;
@@ -41,17 +41,12 @@ float lastY = SCR_HEIGHT / 2.0;
 float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
 
-
-//Point Light positions
-glm::vec3 pointLightPositions[] = {
-	glm::vec3(0.7f,  0.2f,  2.0f),
-	glm::vec3(2.3f, -3.3f, -4.0f),
-	glm::vec3(-4.0f,  2.0f, -12.0f),
-	glm::vec3(0.0f,  0.0f, -3.0f)
-};
-
 //cube
 glm::vec3 cubePos(0.0f, 0.0f, 0.0f);
+
+//Lights
+glm::vec3 lightOne(-1.0f, 1.0f, 0.0f);
+glm::vec3 lightTwo(1.0f, 1.0f, 0.0f);
 
 int main()
 {
@@ -152,7 +147,7 @@ int main()
 	};
 
 	// world space positions of our cubes
-	glm::vec3 cubePositions[] = {
+	/*glm::vec3 cubePositions[] = {
 		glm::vec3(0.0f,  0.0f,  0.0f),
 		glm::vec3(2.0f,  5.0f, -15.0f),
 		glm::vec3(-1.5f, -2.2f, -2.5f),
@@ -163,6 +158,94 @@ int main()
 		glm::vec3(1.5f,  2.0f, -2.5f),
 		glm::vec3(1.5f,  0.2f, -1.5f),
 		glm::vec3(-1.3f,  1.0f, -1.5f)
+	};*/
+
+	// world space positions of our cubes
+	glm::vec3 cubePositions[] = {
+		glm::vec3(0.0f,  0.0f,  0.0f),
+		glm::vec3(-1.0f,  0.0f,  0.0f),
+		glm::vec3(-2.0f,  0.0f,  0.0f),
+		glm::vec3(-3.0f,  0.0f,  0.0f),
+		glm::vec3(1.0f,  0.0f,  0.0f),
+		glm::vec3(2.0f,  0.0f,  0.0f),
+		glm::vec3(3.0f,  0.0f,  0.0f),
+		glm::vec3(0.0f,  0.0f, -1.0f),
+		glm::vec3(-1.0f,  0.0f, -1.0f),
+		glm::vec3(-2.0f,  0.0f, -1.0f),
+		glm::vec3(-3.0f,  0.0f, -1.0f),
+		glm::vec3(1.0f,  0.0f, -1.0f),
+		glm::vec3(2.0f,  0.0f, -1.0f),
+		glm::vec3(3.0f,  0.0f, -1.0f),
+		glm::vec3(0.0f,  0.0f,  1.0f),
+		glm::vec3(-1.0f,  0.0f,  1.0f),
+		glm::vec3(-2.0f,  0.0f,  1.0f),
+		glm::vec3(-3.0f,  0.0f,  1.0f),
+		glm::vec3(1.0f,  0.0f,  1.0f),
+		glm::vec3(2.0f,  0.0f,  1.0f),
+		glm::vec3(3.0f,  0.0f,  1.0f),
+		glm::vec3(0.0f,  0.0f, -2.0f),
+		glm::vec3(-1.0f,  0.0f, -2.0f),
+		glm::vec3(-2.0f,  0.0f, -2.0f),
+		glm::vec3(-3.0f,  0.0f, -2.0f),
+		glm::vec3(1.0f,  0.0f, -2.0f),
+		glm::vec3(2.0f,  0.0f, -2.0f),
+		glm::vec3(3.0f,  0.0f, -2.0f),
+		glm::vec3(0.0f,  0.0f,  2.0f),
+		glm::vec3(-1.0f,  0.0f,  2.0f),
+		glm::vec3(-2.0f,  0.0f,  2.0f),
+		glm::vec3(-3.0f,  0.0f,  2.0f),
+		glm::vec3(1.0f,  0.0f,  2.0f),
+		glm::vec3(2.0f,  0.0f,  2.0f),
+		glm::vec3(3.0f,  0.0f,  2.0f),
+		glm::vec3(0.0f,  0.0f, -3.0f),
+		glm::vec3(-1.0f,  0.0f, -3.0f),
+		glm::vec3(-2.0f,  0.0f, -3.0f),
+		glm::vec3(-3.0f,  0.0f, -3.0f),
+		glm::vec3(1.0f,  0.0f, -3.0f),
+		glm::vec3(2.0f,  0.0f, -3.0f),
+		glm::vec3(3.0f,  0.0f, -3.0f),
+		glm::vec3(0.0f,  0.0f,  3.0f),
+		glm::vec3(-1.0f,  0.0f,  3.0f),
+		glm::vec3(-2.0f,  0.0f,  3.0f),
+		glm::vec3(-3.0f,  0.0f,  3.0f),
+		glm::vec3(1.0f,  0.0f,  3.0f),
+		glm::vec3(2.0f,  0.0f,  3.0f),
+		glm::vec3(3.0f,  0.0f,  3.0f),
+		glm::vec3(0.0f,  0.0f, -4.0f),
+		glm::vec3(-1.0f,  0.0f, -4.0f),
+		glm::vec3(-2.0f,  0.0f, -4.0f),
+		glm::vec3(-3.0f,  0.0f, -4.0f),
+		glm::vec3(1.0f,  0.0f, -4.0f),
+		glm::vec3(2.0f,  0.0f, -4.0f),
+		glm::vec3(3.0f,  0.0f, -4.0f),
+		glm::vec3(0.0f,  0.0f,  4.0f),
+		glm::vec3(-1.0f,  0.0f,  4.0f),
+		glm::vec3(-2.0f,  0.0f,  4.0f),
+		glm::vec3(-3.0f,  0.0f,  4.0f),
+		glm::vec3(1.0f,  0.0f,  4.0f),
+		glm::vec3(2.0f,  0.0f,  4.0f),
+		glm::vec3(3.0f,  0.0f,  4.0f),
+		glm::vec3(0.0f,  0.0f, -5.0f),
+		glm::vec3(-1.0f,  0.0f, -5.0f),
+		glm::vec3(-2.0f,  0.0f, -5.0f),
+		glm::vec3(-3.0f,  0.0f, -5.0f),
+		glm::vec3(1.0f,  0.0f, -5.0f),
+		glm::vec3(2.0f,  0.0f, -5.0f),
+		glm::vec3(3.0f,  0.0f, -5.0f),
+		glm::vec3(0.0f,  0.0f,  5.0f),
+		glm::vec3(-1.0f,  0.0f,  5.0f),
+		glm::vec3(-2.0f,  0.0f,  5.0f),
+		glm::vec3(-3.0f,  0.0f,  5.0f),
+		glm::vec3(1.0f,  0.0f,  5.0f),
+		glm::vec3(2.0f,  0.0f,  5.0f),
+		glm::vec3(3.0f,  0.0f,  5.0f)
+
+	};
+
+	//Light positions
+	glm::vec3 pointLightPositions[] = {
+		glm::vec3(lightOne),
+		glm::vec3(lightTwo)
 	};
 
 
@@ -245,6 +328,7 @@ int main()
 
 		//Material Properites
 		lightingShader.setFloat("material.shininess", 32.0f);
+		lightingShader.setFloat("time", glfwGetTime());
 
 		/*|---------------------|
 		  |   Light Properties  |
@@ -257,7 +341,7 @@ int main()
 		lightingShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
 
 		//Point Light 1
-		lightingShader.setVec3("pointLights[0].position", pointLightPositions[0]);
+		lightingShader.setVec3("pointLights[0].position", lightOne);
 		lightingShader.setVec3("pointLights[0].ambient", 0.05f, 0.05f, 0.05f);
 		lightingShader.setVec3("pointLights[0].diffuse", 0.8f, 0.8f, 0.8f);
 		lightingShader.setVec3("pointLights[0].specular", 1.0f, 1.0f, 1.0f);
@@ -266,31 +350,13 @@ int main()
 		lightingShader.setFloat("pointLights[0].quadratic", 0.032f);
 
 		//Point Light 2
-		lightingShader.setVec3("pointLights[1].position", pointLightPositions[1]);
+		lightingShader.setVec3("pointLights[1].position", lightTwo);
 		lightingShader.setVec3("pointLights[1].ambient", 0.05f, 0.05f, 0.05f);
 		lightingShader.setVec3("pointLights[1].diffuse", 0.8f, 0.8f, 0.8f);
 		lightingShader.setVec3("pointLights[1].specular", 1.0f, 1.0f, 1.0f);
 		lightingShader.setFloat("pointLights[1].constant", 1.0f);
 		lightingShader.setFloat("pointLights[1].linear", 0.09f);
 		lightingShader.setFloat("pointLights[1].quadratic", 0.032f);
-
-		//Point Light 3
-		lightingShader.setVec3("pointLights[2].position", pointLightPositions[2]);
-		lightingShader.setVec3("pointLights[2].ambient", 0.55f, 0.55f, 0.55f);
-		lightingShader.setVec3("pointLights[2].diffuse", 0.8f, 0.8f, 0.8f);
-		lightingShader.setVec3("pointLights[2].specular", 1.0f, 1.0f, 1.0f);
-		lightingShader.setFloat("pointLights[2].constant", 1.0f);
-		lightingShader.setFloat("pointLights[2].linear", 0.09f);
-		lightingShader.setFloat("pointLights[2].quadratic", 0.032f);
-
-		//Point Light 4
-		lightingShader.setVec3("pointLights[3].position", pointLightPositions[3]);
-		lightingShader.setVec3("pointLights[3].ambient", 0.55f, 0.55f, 0.55f);
-		lightingShader.setVec3("pointLights[3].diffuse", 0.8f, 0.8f, 0.8f);
-		lightingShader.setVec3("pointLights[3].specular", 1.0f, 1.0f, 1.0f);
-		lightingShader.setFloat("pointLights[3].constant", 1.0f);
-		lightingShader.setFloat("pointLights[3].linear", 0.09f);
-		lightingShader.setFloat("pointLights[3].quadratic", 0.032f);
 
 		//view/projection tranformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -323,29 +389,34 @@ int main()
 			glm::mat4 model;
 			model = glm::translate(model, cubePositions[i]);
 			model = glm::translate(model, cubePos);
-			float angle = 20.0f * i;
-			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			//float angle = 20.0f * i;
+			//model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 			lightingShader.setMat4("model", model);
 
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
 
 
-		// also draw the lamp object
+		// also draw the lamp objects
 		lamp.use();
 		lamp.setMat4("projection", projection);
 		lamp.setMat4("view", view);
 
 		glBindVertexArray(lightVAO);
-		for (unsigned int i = 0; i < sizeof(pointLightPositions) / sizeof(pointLightPositions[0]); i++)
-		{
-			model = glm::mat4();
-			model = glm::translate(model, pointLightPositions[i]);
-			model = glm::scale(model, glm::vec3(0.05f)); // a smaller cube
-			lamp.setMat4("model", model);
+		model = glm::mat4();
+		model = glm::translate(model, lightOne);
+		model = glm::scale(model, glm::vec3(0.05f)); // a smaller cube
+		lamp.setMat4("model", model);
 
-			glDrawArrays(GL_TRIANGLES, 0, 36);
-		}
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+
+		glBindVertexArray(lightVAO);
+		model = glm::mat4();
+		model = glm::translate(model, lightTwo);
+		model = glm::scale(model, glm::vec3(0.05f)); // a smaller cube
+		lamp.setMat4("model", model);
+
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		/*|--------------------------------------|
 		  |   Swap buffers and poll I/O Events   |
@@ -403,32 +474,38 @@ void processInput(GLFWwindow *window)
 	//Light movement
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 	{
-		pointLightPositions[0].z -= 0.01;
+		lightOne.z -= 0.01;
+		lightTwo.z += 0.01;
 	}
 
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 	{
-		pointLightPositions[0].z += 0.01;
+		lightOne.z += 0.01;
+		lightTwo.z -= 0.01;
 	}
 
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 	{
-		pointLightPositions[0].x -= 0.01;
+		lightOne.x -= 0.01;
+		lightTwo.x += 0.01;
 	}
 
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 	{
-		pointLightPositions[0].x += 0.01;
+		lightOne.x += 0.01;
+		lightTwo.x -= 0.01;
 	}
 
 	if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS)
 	{
-		pointLightPositions[0].y -= 0.01;
+		lightOne.y -= 0.01;
+		lightTwo.y += 0.01;
 	}
 
 	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
 	{
-		pointLightPositions[0].y += 0.01;
+		lightOne.y += 0.01;
+		lightTwo.y -= 0.01;
 	}
 
 	//Cube movement

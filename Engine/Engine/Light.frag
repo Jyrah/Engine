@@ -31,12 +31,13 @@ struct PointLight {
 	vec3 specular;
 };
 
-#define NR_POINT_LIGHTS 4  
+#define NR_POINT_LIGHTS 2  
 uniform PointLight pointLights[NR_POINT_LIGHTS];
 
 uniform Material material;
 uniform DirLight dirLight;
-uniform vec3 viewPos;  
+uniform vec3 viewPos;
+uniform float time;
 
 //functions
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir);
@@ -61,6 +62,18 @@ void main()
 
 	//Spot Light
 
+	//Emission Light
+	vec3 emission = vec3(0.0);
+    if (texture(material.specular, TexCoords).rgb == 0.0)   /*rough check for blackbox inside spec texture */
+    {
+        //apply emission texture
+        emission = texture(material.emission, TexCoords).rgb;
+        
+        //some extra fun stuff with "time uniform"
+        emission = texture(material.emission, TexCoords + vec2(0.0,time)).rgb;   /*moving */
+
+    }
+	//result += emission;
 
 	FragColor = vec4(result, 1.0);
 }
