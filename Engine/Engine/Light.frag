@@ -64,7 +64,7 @@ void main()
 
 	//Emission Light
 	vec3 emission = vec3(0.0);
-    if (texture(material.specular, TexCoords).rgb == 0.0)   /*rough check for blackbox inside spec texture */
+    if (texture(material.specular, TexCoords).rgb == vec3(0.0f, 0.0f, 0.0f))   /*rough check for blackbox inside spec texture */
     {
         //apply emission texture
         emission = texture(material.emission, TexCoords).rgb;
