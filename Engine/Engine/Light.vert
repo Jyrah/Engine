@@ -13,7 +13,8 @@ uniform mat4 projection;
 uniform vec3 posP;
 uniform float time;
 
-void main(){
+void main()
+{
 	float phase = 0.5 * time;
 	float freq = 1.0;
 	float amplitude = 0.5;

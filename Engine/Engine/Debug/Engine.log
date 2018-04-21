@@ -1,23 +1,29 @@
 ﻿  Engine.cpp
 c:\users\jyrah\engine\engine\engine\shaders.h(53): warning C4101: 'infoLog': unreferenced local variable
 c:\users\jyrah\engine\engine\engine\shaders.h(52): warning C4101: 'success': unreferenced local variable
-c:\users\jyrah\engine\engine\engine\engine.cpp(287): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(327): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(426): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(431): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(436): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(441): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(446): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(451): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(457): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(462): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(467): warning C4305: '-=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(472): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jyrah\engine\engine\engine\engine.cpp(491): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(492): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(496): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(497): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(499): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(500): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\jyrah\engine\engine\engine\engine.cpp(507): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(309): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(331): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(477): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(478): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(483): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(484): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(489): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(490): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(495): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(496): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(501): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(502): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(507): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(508): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(514): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(519): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(524): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(529): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jyrah\engine\engine\engine\engine.cpp(548): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(549): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(553): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(554): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(556): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(557): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\jyrah\engine\engine\engine\engine.cpp(564): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Engine.vcxproj -> C:\Users\Jyrah\Engine\Engine\Debug\Engine.exe
