@@ -77,7 +77,7 @@ void main()
 	}
 
 	//Spot Light
-	//result += CalcSpotLight(spotLight, norm, FragPos, viewDir);
+	result += CalcSpotLight(spotLight, norm, FragPos, viewDir);
 
 	//Emission Light
 	vec3 emission = vec3(0.0);
@@ -90,7 +90,7 @@ void main()
         emission = texture(material.emission, TexCoords + vec2(0.0,time)).rgb;   /*moving */
 
     }
-	//result += emission;
+	result += emission;
 
 	FragColor = vec4(result, 1.0);
 }
