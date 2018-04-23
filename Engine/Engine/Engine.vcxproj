@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="NoMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
